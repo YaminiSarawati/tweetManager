@@ -1,0 +1,9 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <input formControlName="username" placeholder="Username" required />
+  <input type="password" formControlName="password" placeholder="Password" required />
+  <button type="submit">Login</button>
+</form>
+
+<div *ngIf="loginForm.invalid && loginForm.touched">
+  <p>Please enter valid login credentials.</p>
+</div>

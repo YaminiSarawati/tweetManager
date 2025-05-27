@@ -1,0 +1,11 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <input formControlName="username" placeholder="Username" required />
+  <input formControlName="email" placeholder="Email" required />
+  <input type="password" formControlName="password" placeholder="Password" required />
+  <button type="submit">Register</button>
+</form>
+
+<!-- Use *ngIf now that CommonModule is imported -->
+<div *ngIf="registerForm.invalid && registerForm.touched">
+  <p>Please fill out all fields correctly.</p>
+</div>

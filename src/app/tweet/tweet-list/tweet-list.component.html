@@ -1,0 +1,7 @@
+<h2>Your Tweets</h2>
+<div *ngFor="let t of tweets">
+  <p>{{ t.content }}</p>
+  <small>{{ t.createdAt | date:'short' }}</small>
+  <hr/>
+</div>
+<a routerLink="/new">New Tweet</a>

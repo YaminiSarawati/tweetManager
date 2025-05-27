@@ -1,0 +1,5 @@
+<h2>New Tweet</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <textarea formControlName="content" rows="4"></textarea>
+  <button type="submit" [disabled]="form.invalid">Post</button>
+</form>
